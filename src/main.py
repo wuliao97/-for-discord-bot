@@ -1,5 +1,6 @@
 import os
 import config 
+import utils.functions as funcs
 import asyncio
 
 import discord
@@ -10,13 +11,15 @@ bot = commands.Bot(
 )
 
 
-async def main():
-    for i in config.cog_files:
-        await bot.load_extension(i)
+def main():
+    for i in funcs.cog_files:
+        bot.load_extension(i)
     
-    await bot.start(config.token)
-
+    #await bot.start(config.TOKEN)
+    bot.run(config.TOKEN)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    #asyncio.run(main())
+    
+    main()

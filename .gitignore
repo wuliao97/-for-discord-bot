@@ -1,3 +1,6 @@
 /.venv/
 /src/config/*
 __pycache__/
+
+
+/**/test.py
